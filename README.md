@@ -19,7 +19,9 @@ This project is built using **Django** for the backend and **Python** for data s
 - **Ticket History**: The system keeps track of all bookings, cancellations, and rebookings using a linked list.
 - **Undo Cancellation**: Users can undo cancellations, re-booking the most recently canceled ticket.
 
-## Installation
+## Snapshot's of project
+![image](https://github.com/user-attachments/assets/c0c3457a-47dd-4d28-8d4b-0d043e99c9af)
+
 
 ### Clone the repository
 
