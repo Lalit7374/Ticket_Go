@@ -43,7 +43,6 @@ git clone https://github.com/Lalit7374/Ticket_Go.git
 2. **Set Up the Project**: Running database migrations (`python manage.py migrate`).
 3. **Running the Project**: Running the development server (`python manage.py runserver`).
 
-Just copy and paste this into your `README.md` file, and it will have the correct setup instructions.
 
 
 
