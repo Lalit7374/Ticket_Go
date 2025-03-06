@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undo Ticket Cancellation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(240, 240, 240); 
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        .ticket-info {
+            margin-top: 20px;
+            font-size: 1.5em;
+        }
+
+        .queue {
+            margin-top: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 12px 25px;
+            background-color: rgb(76, 175, 80); 
+            color: rgb(255, 255, 255);
+            border-radius: 8px;
+            margin: 20px;
+        }
+
+        a:hover {
+            background-color: rgb(69, 160, 73); 
+        }
+    </style>
+</head>
+<body>
+    <h1>Undo Ticket Cancellation</h1>
+
+    {% if rebooked_ticket %}
+        <div class="ticket-info">
+            <h2>Ticket Rebooked: {{ rebooked_ticket }}</h2>
+        </div>
+    {% else %}
+        <p>No ticket to undo cancellation.</p>
+    {% endif %}
+
+    <div class="queue">
+        <h3>Updated Ticket Queue</h3>
+        {% for ticket in queue %}
+            <p>{{ ticket }}</p>
+        {% endfor %}
+    </div>
+
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>

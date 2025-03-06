@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Ticket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(240, 240, 240);
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+
+        form {
+            margin: 20px;
+            background-color: rgb(255, 255, 255);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        input, select {
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            border: 1px solid rgb(204, 204, 204);
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: rgb(76, 175, 80);
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: rgb(69, 160, 73);
+        }
+
+        .gender-section {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+
+        .gender-section label {
+            font-size: 1rem;
+            margin-right: 10px;
+            color: rgb(51, 51, 51);
+        }
+
+        .gender-section input {
+            margin-right: 10px;
+        }
+
+        /* Centering the current ticket queue */
+        .queue {
+            margin-top: 30px;
+            color: rgb(51, 51, 51);
+            text-align: center;
+            padding-left: 30px;
+            padding-right: 30px;
+            max-width: 500px;
+            margin: 30px auto;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .queue h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .queue p {
+            font-size: 1.1rem;
+            margin: 10px 0;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 1rem;
+            color: rgb(0, 123, 255);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Book Your Ticket</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        <input type="text" name="passenger_name" placeholder="Passenger Name" required><br>
+        <input type="number" name="passenger_age" placeholder="Passenger Age" required><br>
+        <input type="date" name="travel_date" required><br>
+
+        
+        <div>
+            <input type="text" name="source_city" placeholder="Source City" required><br>
+            <input type="text" name="destination_city" placeholder="Destination City" required><br>
+        </div>
+
+       
+        <div class="gender-section">
+            <div>
+                <input type="radio" id="male" name="gender" value="Male" required>
+                <label for="male">Male</label>
+            </div>
+            <div>
+                <input type="radio" id="female" name="gender" value="Female" required>
+                <label for="female">Female</label>
+            </div>
+        </div>
+        
+        <button type="submit">Book Ticket</button>
+    </form>
+
+    {% if ticket %}
+        <h2>Your Ticket: {{ ticket }}</h2>
+    {% endif %}
+
+    
+    <div class="queue">
+        <h3>Current Ticket Queue</h3>
+        {% for ticket in queue %}
+            <p>{{ ticket }}</p>
+        {% endfor %}
+    </div>
+
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>
+
+
+
+

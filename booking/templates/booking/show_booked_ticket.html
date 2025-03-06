@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booked Tickets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(245, 245, 245);
+            color: rgb(51, 51, 51); 
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .ticket-list {
+            margin-top: 20px;
+        }
+
+        .ticket-item {
+            background-color: rgb(76, 175, 80); 
+            color: rgb(255, 255, 255); 
+            margin: 10px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(255, 255, 255); 
+            font-size: 1.2em;
+            margin-top: 20px;
+            display: inline-block;
+            background-color: rgb(76, 175, 80);
+            padding: 12px 25px;
+            border-radius: 8px;
+        }
+
+        a:hover {
+            background-color: rgb(69, 160, 73);
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Booked Tickets</h1>
+
+    <div class="ticket-list">
+        {% if booked_tickets %}
+            {% for ticket in booked_tickets %}
+                <div class="ticket-item">
+                    {{ ticket }}
+                </div>
+            {% endfor %}
+        {% else %}
+            <p>No tickets booked yet.</p>
+        {% endif %}
+    </div>
+
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>
