@@ -22,6 +22,14 @@ This project is built using **Django** for the backend and **Python** for data s
 ## Snapshot's of project
 ![image](https://github.com/user-attachments/assets/c0c3457a-47dd-4d28-8d4b-0d043e99c9af)
 
+![image](https://github.com/user-attachments/assets/ae35a565-cce2-414d-9b1b-b6fced9ef94d) 
+
+![image](https://github.com/user-attachments/assets/06608864-a675-429d-a16f-c8307b2d75c5)
+
+![image](https://github.com/user-attachments/assets/4dec4e07-5f18-4c9f-86bb-92fe8a7f29fd)
+
+
+
 
 ### Clone the repository
 
