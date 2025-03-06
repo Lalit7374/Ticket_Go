@@ -39,21 +39,17 @@ To get started with this project, first clone the repository:
 git clone https://github.com/Lalit7374/Ticket_Go.git
 
 
+### Install Dependencies
 
-### Added Sections:
-1. **Navigating to the project directory**:
-   - After cloning the repository, the instructions guide users to navigate into the `ticket_booking` directory.
-   
-2. **Installing Django**:
-   - Added the step to install Django using `pip install django`.
-   
-3. **Running Migrations**:
-   - Added instructions for running database migrations using `python manage.py migrate`.
+ Install **Django** and any other required dependencies:
 
-4. **Running the Django Server**:
-   - Instructions to start the server using `python manage.py runserver` for testing the application locally.
+   ```bash
+   pip install django
 
-With this updated `README.md`, users can follow the steps to clone, install dependencies, run migrations, and start the Django server for the project.
+ Running the Project
 
-Let me know if you need any other changes!
+```bash
+python manage.py runserver
+
+
 
