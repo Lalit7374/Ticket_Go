@@ -39,7 +39,7 @@ git clone https://github.com/Lalit7374/Ticket_Go.git
 
 
 ### Key Sections Added:
-1. **Install Dependencies**: Installing Django via pip.
+1. **Install Dependencies**: Installing Django via pip (`pip install django`).
 2. **Set Up the Project**: Running database migrations (`python manage.py migrate`).
 3. **Running the Project**: Running the development server (`python manage.py runserver`).
 
