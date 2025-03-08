@@ -31,6 +31,7 @@ This project is built using **Django** for the backend and **Python** for data s
 
 
 
+
 ### Clone the repository
 
 To get started with this project, first clone the repository:
