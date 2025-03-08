@@ -44,6 +44,7 @@ git clone https://github.com/Lalit7374/Ticket_Go.git
 2. **Set Up the Project**: Running database migrations (`python manage.py migrate`).
 3. **Running the Project**: Running the development server (`python manage.py runserver`).
 
+![ViteReact-GoogleChrome2025-03-0813-15-04-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/289f0b61-ea23-4030-8738-e1b1e6143302)
 
 
 
